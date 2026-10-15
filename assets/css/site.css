@@ -1,0 +1,28 @@
+:root { --bg:#FFFFFF; --ink:#0E1116; --ink-2:rgba(14,17,22,.74); --ink-3:rgba(14,17,22,.56); --line:rgba(14,17,22,.10); --card:rgba(14,17,22,.04); --accent:#3E57D6; }
+@media (prefers-color-scheme: dark) { :root { --bg:#05060A; --ink:#F2F4F8; --ink-2:#C9CEDA; --ink-3:#A3AAB8; --line:rgba(255,255,255,.12); --card:rgba(255,255,255,.06); --accent:#9DB4FF; } }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.8 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif; -webkit-font-smoothing:antialiased; }
+main { max-width:720px; margin:0 auto; padding:32px 20px 80px; }
+.site-nav { max-width:720px; margin:0 auto; padding:20px 20px 0; font-size:14px; }
+.site-nav a { color:var(--ink-3); text-decoration:none; }
+h1 { font-size:28px; line-height:1.4; margin:0 0 8px; }
+h2 { font-size:20px; line-height:1.5; margin:40px 0 8px; padding-top:16px; border-top:1px solid var(--line); }
+h3 { font-size:17px; margin:24px 0 4px; }
+p, li { color:var(--ink-2); }
+ul { padding-left:1.4em; }
+a { color:var(--accent); overflow-wrap:anywhere; }
+.app-head { display:flex; align-items:center; gap:16px; margin:8px 0 12px; }
+.app-head img { width:64px; height:64px; border-radius:15px; }
+.app-head .name { font-weight:800; font-size:22px; line-height:1.3; color:var(--ink); }
+.app-head .tag { color:var(--ink-3); font-size:14px; }
+.tabs { display:flex; gap:8px; margin:0 0 28px; padding:0; list-style:none; flex-wrap:wrap; }
+.tabs a { display:block; padding:6px 14px; border-radius:999px; border:1px solid var(--line); color:var(--ink-2); text-decoration:none; font-size:14px; }
+.tabs a[aria-current="page"] { background:var(--ink); color:var(--bg); border-color:var(--ink); }
+.card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:20px 22px; margin:16px 0; }
+.btn { display:inline-block; margin-top:8px; padding:12px 22px; border-radius:999px; background:var(--ink); color:var(--bg) !important; font-weight:700; text-decoration:none; }
+.app-list { list-style:none; padding:0; margin:24px 0; display:grid; gap:12px; }
+.app-list a { display:flex; align-items:center; gap:16px; padding:16px; border-radius:18px; background:var(--card); border:1px solid var(--line); text-decoration:none; }
+.app-list img { width:56px; height:56px; border-radius:13px; }
+.app-list .name { font-weight:800; color:var(--ink); }
+.app-list .tag { color:var(--ink-3); font-size:14px; }
+footer { max-width:720px; margin:0 auto; padding:0 20px 40px; color:var(--ink-3); font-size:13px; }

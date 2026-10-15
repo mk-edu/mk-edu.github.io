@@ -1,0 +1,10 @@
+# GitHub Pages（Jekyll）の設定。アプリごとのページは apps/<slug>/ に置き、一覧は _data/apps.yml から作る
+title: mk-edu
+description: mk-edu のiPhoneアプリ
+lang: ja
+url: https://mk-edu.github.io
+markdown: kramdown
+kramdown:
+  auto_ids: false
+exclude:
+  - README.md

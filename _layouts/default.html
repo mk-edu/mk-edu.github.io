@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+<link rel="stylesheet" href="/assets/css/site.css">
+{% if page.icon %}<link rel="icon" href="{{ page.icon }}">{% endif %}
+</head>
+<body>
+<nav class="site-nav"><a href="/">{{ site.title }}</a></nav>
+<main>
+{{ content }}
+</main>
+<footer>© {{ site.time | date: "%Y" }} {{ site.title }}</footer>
+</body>
+</html>

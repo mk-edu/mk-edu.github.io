@@ -1,0 +1,8 @@
+# アプリの一覧（ホームに並ぶ順）。アプリを足すときは、ここに1件足して apps/<slug>/ を作る
+- slug: sleeplit
+  name: Sleeplit
+  tagline: シンプルな睡眠記録と目覚まし
+  icon: /apps/sleeplit/icon.png
+  # App Store で公開したら URL を入れる（空のあいだはボタンを出さない）
+  app_store_url:
+  support_form_url: https://docs.google.com/forms/d/e/1FAIpQLSeLV4CmdWpjvarc5icV1P8Pl4UqVVJmBF2Le1CJ7SiUtS2rWQ/viewform

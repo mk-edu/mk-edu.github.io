@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% assign app = site.data.apps | where: "slug", page.app | first %}
+<div class="app-head">
+  <img src="{{ app.icon }}" alt="">
+  <div><div class="name">{{ app.name }}</div><div class="tag">{{ app.tagline }}</div></div>
+</div>
+{% assign base = "/apps/" | append: app.slug | append: "/" %}
+<ul class="tabs">
+  <li><a href="{{ base }}"{% if page.url == base %} aria-current="page"{% endif %}>概要</a></li>
+  <li><a href="{{ base }}support/"{% if page.url contains "/support/" %} aria-current="page"{% endif %}>サポート</a></li>
+  <li><a href="{{ base }}privacy/"{% if page.url contains "/privacy/" %} aria-current="page"{% endif %}>プライバシーポリシー</a></li>
+</ul>
+{{ content }}
