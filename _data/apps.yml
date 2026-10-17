@@ -2,6 +2,7 @@
 - slug: sleeplit
   name: Sleeplit
   tagline: シンプルな睡眠記録と目覚まし
+  tagline_en: Simple sleep log & alarm
   icon: /apps/sleeplit/icon.png
   # App Store で公開したら URL を入れる（空のあいだはボタンを出さない）
   app_store_url:

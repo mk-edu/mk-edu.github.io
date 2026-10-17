@@ -1,6 +1,7 @@
 ---
 layout: app
 app: sleeplit
+lang: ja
 title: Sleeplit プライバシーポリシー
 permalink: /apps/sleeplit/privacy/
 icon: /apps/sleeplit/icon.png

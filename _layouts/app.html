@@ -2,14 +2,24 @@
 layout: default
 ---
 {% assign app = site.data.apps | where: "slug", page.app | first %}
+{% assign ja_base = "/apps/" | append: app.slug | append: "/" %}
+{% assign en_base = ja_base | append: "en/" %}
+{% if page.lang == "en" %}
+  {% assign base = en_base %}{% assign other_base = ja_base %}{% assign other_label = "日本語" %}
+  {% assign t_overview = "Overview" %}{% assign t_support = "Support" %}{% assign t_privacy = "Privacy Policy" %}
+{% else %}
+  {% assign base = ja_base %}{% assign other_base = en_base %}{% assign other_label = "English" %}
+  {% assign t_overview = "概要" %}{% assign t_support = "サポート" %}{% assign t_privacy = "プライバシーポリシー" %}
+{% endif %}
+{% assign sub = page.url | remove_first: base %}
 <div class="app-head">
   <img src="{{ app.icon }}" alt="">
-  <div><div class="name">{{ app.name }}</div><div class="tag">{{ app.tagline }}</div></div>
+  <div><div class="name">{{ app.name }}</div><div class="tag">{% if page.lang == "en" and app.tagline_en %}{{ app.tagline_en }}{% else %}{{ app.tagline }}{% endif %}</div></div>
+  <a class="lang-switch" href="{{ other_base }}{{ sub }}" hreflang="{% if page.lang == 'en' %}ja{% else %}en{% endif %}">{{ other_label }}</a>
 </div>
-{% assign base = "/apps/" | append: app.slug | append: "/" %}
 <ul class="tabs">
-  <li><a href="{{ base }}"{% if page.url == base %} aria-current="page"{% endif %}>概要</a></li>
-  <li><a href="{{ base }}support/"{% if page.url contains "/support/" %} aria-current="page"{% endif %}>サポート</a></li>
-  <li><a href="{{ base }}privacy/"{% if page.url contains "/privacy/" %} aria-current="page"{% endif %}>プライバシーポリシー</a></li>
+  <li><a href="{{ base }}"{% if page.url == base %} aria-current="page"{% endif %}>{{ t_overview }}</a></li>
+  <li><a href="{{ base }}support/"{% if page.url contains "/support/" %} aria-current="page"{% endif %}>{{ t_support }}</a></li>
+  <li><a href="{{ base }}privacy/"{% if page.url contains "/privacy/" %} aria-current="page"{% endif %}>{{ t_privacy }}</a></li>
 </ul>
 {{ content }}

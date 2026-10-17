@@ -7,6 +7,7 @@ GitHub Pages（Jekyll）のサイト。アプリのサポートページとプ�
 /apps/<slug>/              アプリの概要
 /apps/<slug>/support/      サポート（お問い合わせ・よくある質問）
 /apps/<slug>/privacy/      プライバシーポリシー
+/apps/<slug>/en/…          英語版（front matter に lang: en。タブとリンクは _layouts/app.html が言語で切り替える）
 /app-ads.txt               AdMob の認定販売者（ルートに置く決まり）
 ```
 

@@ -1,6 +1,7 @@
 ---
 layout: app
 app: sleeplit
+lang: ja
 title: Sleeplit サポート
 permalink: /apps/sleeplit/support/
 icon: /apps/sleeplit/icon.png
